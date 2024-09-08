@@ -1,0 +1,94 @@
+{
+	"navbar": {
+		"home": "Home",
+		"Products": "Products",
+		"contactUs": "ContactUs"
+	},
+	"logo": "Phota W pashker",
+	"hero": {
+		"welcome": "Welcome!",
+		"description": "At P.L Girls Academy, we dreamed of having a place that brings together ambitious girls from all over the world. From our first day, we became interested in creating a community of ambitious girls who are able to achieve their dreams, to be with them step by step in their success story 💞",
+		"newLine": "because we believe that in order to succeed, we must be together🤗",
+		"buttons": {
+			"button1": "Apply Now",
+			"button2": "About us"
+		}
+	},
+	"aboutUs": {
+		"headline": "Community of Ambitious Girls",
+		"title": "Know More About Your Audience.",
+		"subTitle": {
+			"first": "Where we offer courses in multiple languages with professional curricula. ",
+
+			"second": "We prepare you for the job market with business lectures and live coaching sessions to help you understand yourself and achieve your goals 🥰. ",
+
+			"third": "We are delighted to be a part of your dream and success journey."
+		}
+	},
+	"whatsapp": "contact us:",
+	"form": {
+		"name": "name",
+		"email": "email",
+		"message": "message",
+		"submit": "submit",
+		"successSend": "Send Successfully"
+	},
+	"developer": {
+		"name": "Fares Mohamed",
+		"description": "this site developed by",
+		"website": "https://fares-farosa.vercel.app/"
+	},
+	"headlines": {
+		"headline1": {
+			"title": "Our Products",
+			"subTitle": "This is what we Provide"
+		}
+	},
+	"productsIcons": [
+		{
+			"title": "Robe pathroom",
+			"parameter": "Robe-pathroom",
+			"path": "/Products-Icons/robe.svg"
+		},
+		{
+			"title": "Sliper",
+			"parameter": "Sliper",
+			"path": "/Products-Icons/sliper.svg"
+		},
+		{
+			"title": "t-shirts polo",
+			"parameter": "t-shirts-polo",
+			"path": "/Products-Icons/t-shirt-polo.svg"
+		},
+		{
+			"title": "towel",
+			"parameter": "towel",
+			"path": "/Products-Icons/towel.svg"
+		}
+	],
+	"header": {
+		"products": "This is our Product"
+	},
+	"categories": [
+		{
+			"title":"all",
+			"parameter":""
+		},
+		{
+			"title": "Robe pathroom",
+			"parameter": "Robe-pathroom"
+		},
+		{
+			"title": "Sliper",
+			"parameter": "sliper"
+		},
+		{
+			"title": "t-shirts polo",
+			"parameter": "t-shirts-polo"
+		},
+		{
+			"title": "towel",
+			"parameter": "towel"
+		}
+	]
+}
