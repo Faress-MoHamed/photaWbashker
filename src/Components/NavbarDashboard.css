@@ -1,0 +1,6 @@
+.active {
+	color: #658a72;
+}
+.active::before {
+	width: 100%;
+}

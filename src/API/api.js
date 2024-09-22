@@ -3,11 +3,10 @@ import { AXIOSHANDLER } from "../utils/axiosHandler";
 export const fetchProducts = async (category) => {
 	try {
 		// Construct the URL based on the category
-		let url = "/api/products";
+		let url = "/products";
 		if (category) {
 			url += `?Category=${category}`;
 		}
-		// console.log(url, category);
 		// Fetch the data from the API
 		const { data } = await AXIOSHANDLER.get(url, {
 			data: category,
@@ -28,7 +27,7 @@ export const fetchProducts = async (category) => {
 };
 export const GetById = async (id) => {
 	try {
-		const { data } = await AXIOSHANDLER.get(`/api/products/${id}`);
+		const { data } = await AXIOSHANDLER.get(`/products/${id}`);
 		return data || [];
 	} catch (error) {
 		console.error(
@@ -40,8 +39,7 @@ export const GetById = async (id) => {
 };
 export const GetCategoryId = async (id) => {
 	try {
-		const { data } = await AXIOSHANDLER.get(`/api/categories/${id}`);
-		console.log(data);
+		const { data } = await AXIOSHANDLER.get(`/categories/${id}`);
 		return data || [];
 	} catch (error) {
 		console.error(
@@ -57,8 +55,7 @@ export const getAllCategories = async (category) => {
 		// Construct the URL based on the category
 
 		// Fetch the data from the API
-		const { data } = await AXIOSHANDLER.get("/api/categories");
-		console.log(data);
+		const { data } = await AXIOSHANDLER.get("/categories");
 		// Return the list of products
 		return data || [];
 	} catch (error) {
@@ -75,7 +72,7 @@ export const getAllCategories = async (category) => {
 
 export const AddProduct = async (data) => {
 	try {
-		const res = AXIOSHANDLER.post("/api/products", data, {
+		const res = AXIOSHANDLER.post("/products", data, {
 			headers: {
 				"Content-Type": "multipart/form-data",
 			},
@@ -87,8 +84,8 @@ export const AddProduct = async (data) => {
 };
 export const UpdateProduct = async (editProductId, formData) => {
 	try {
-		const res = await AXIOSHANDLER.put(
-			`/api/products/${editProductId}`,
+		const res = await AXIOSHANDLER.patch(
+			`/products/${editProductId}`,
 			formData,
 			{
 				headers: {
@@ -103,7 +100,7 @@ export const UpdateProduct = async (editProductId, formData) => {
 };
 export const DeleteProduct = async (id) => {
 	try {
-		const { data } = await AXIOSHANDLER.delete(`/api/products/${id}`);
+		const { data } = await AXIOSHANDLER.delete(`/products/${id}`);
 		return data;
 	} catch (error) {
 		console.error(error?.data?.maeeage);

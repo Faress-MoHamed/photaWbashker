@@ -1,4 +1,46 @@
 {
+	"dashboard": {
+		"navbar": {
+			"home": "Home",
+			"Products": "Products",
+			"category": "categories",
+			"user": "users"
+		},
+		"headers": {
+			"productList": "productList",
+			"categoryList": "Category List"
+		},
+		"productForm": {
+			"product_name": "product name",
+			"product_price": "product price",
+			"product_category": "product category",
+			"product_image": "product image",
+			"product_quantity": "product quantity",
+			"product_color": "product color",
+			"product_color_hex": "product color hex",
+			"product_size": "product size",
+			"product_btn_size": "Add size",
+			"product_btn_color": "Add color",
+			"remove": "remove",
+			"current_image": "current image",
+			"product_Add_Btn": "Add Product",
+			"product_Update_Btn": "Update product",
+			"product_delete_Btn": "delete product"
+		},
+		"services": {
+			"products": "products",
+			"category": "category",
+			"user": "users"
+		},
+		"categoryForm": {
+			"category_name": "category name",
+			"category_Image": "category Image",
+			"category_Add_Btn": "Add Category",
+			"category_Update_Btn": "Update Category",
+			"category_delete_Btn": "delete Category"
+		},
+		"hello": "hello"
+	},
 	"navbar": {
 		"home": "Home",
 		"Products": "Products",
@@ -15,15 +57,7 @@
 		}
 	},
 	"aboutUs": {
-		"headline": "Community of Ambitious Girls",
-		"title": "Know More About Your Audience.",
-		"subTitle": {
-			"first": "Where we offer courses in multiple languages with professional curricula. ",
-
-			"second": "We prepare you for the job market with business lectures and live coaching sessions to help you understand yourself and achieve your goals 🥰. ",
-
-			"third": "We are delighted to be a part of your dream and success journey."
-		}
+		"title": "Know More About company vision."
 	},
 	"whatsapp": "contact us:",
 	"form": {
@@ -66,29 +100,22 @@
 			"path": "/Products-Icons/towel.svg"
 		}
 	],
-	"header": {
-		"products": "This is our Product"
+	"oneProduct": {
+		"piece": "piece",
+		"color": "Avalibale color",
+		"size": "size",
+		"category": "category",
+		"orderNow": "order Now",
+		"price": "price"
 	},
-	"categories": [
-		{
-			"title":"all",
-			"parameter":""
-		},
-		{
-			"title": "Robe pathroom",
-			"parameter": "Robe-pathroom"
-		},
-		{
-			"title": "Sliper",
-			"parameter": "sliper"
-		},
-		{
-			"title": "t-shirts polo",
-			"parameter": "t-shirts-polo"
-		},
-		{
-			"title": "towel",
-			"parameter": "towel"
-		}
-	]
+	"headers": {
+		"ProductDetails": "Product Details",
+		"products": "This is our Product",
+		"clientReviews": "Some of client's reviews",
+		"aboutus": "About US",
+		"ourClints": "Our most prominent clients"
+	},
+	"mission": "photaWbashker’s mission is to provide high-quality towels specifically designed to meet the needs of beauty salons, with a focus on innovation, comfort, and sustainability. We are committed to delivering durable and efficient products that add a touch of luxury for our clients while upholding environmental standards and enhancing the customer experience. Our goal is to support beauty salons in offering exceptional services by providing practical and elegant solutions.",
+	"vision": "photaWbashker aims to be the leading choice in providing premium towels tailored for beauty salons, offering products that combine luxury and durability while maintaining environmental sustainability. We strive to empower salons to deliver exceptional customer experiences through innovative products that align with the evolving demands of the market.",
+	"visionSubHeader": "vision company"
 }

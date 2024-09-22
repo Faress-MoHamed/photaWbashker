@@ -10,7 +10,6 @@ i18n
 	.init({
 		supportedLngs: ["ar", "en"],
 		fallbackLng: "ar",
-		// debug: true,
 		resources: {
 			ar: {
 				translation: arTranslate,
@@ -19,6 +18,7 @@ i18n
 				translation: enTranslate,
 			},
 		},
+		
 		detection: {
 			order: [
 				"cookie",

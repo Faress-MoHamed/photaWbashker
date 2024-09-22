@@ -8,11 +8,10 @@ import { IoMenu } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 
 const socialMediaAccounts = {
-	faceBook: "https://www.facebook.com/P.LGirlsAcademy?mibextid=kFxxJD",
-	tikTok: "http://www.tiktok.com/@plgirlsacademy",
-	instagram: "https://www.instagram.com/p.l_girls.academy",
-	google: "mailto:plgirlsacademy@gmail.com",
-	tel: "tel:+201508096373",
+	faceBook: "https://www.facebook.com/fotawbashker?mibextid=kFxxJD",
+	instagram: "https://www.instagram.com/fota.bashker?igsh=MWJqdnN2MG9qeHFseA==",
+	google: "mailto:fotawbashkeer@gmail.com",
+	tel: "tel:+201118249382",
 };
 function TopNavBar({ setOpen }) {
 	const { isMobile } = useContext(MobileHandlerContext);
@@ -29,22 +28,22 @@ function TopNavBar({ setOpen }) {
 				<nav className="flex justify-between mx-auto items-center bg-white">
 					<div className="social-Media-Side flex gap-5 items-center">
 						<div className="item  ">
-							<Link to={socialMediaAccounts.tikTok}>
+							<Link target="_blank" to={socialMediaAccounts.tikTok}>
 								<FaTiktok className="text-primary-700" />
 							</Link>
 						</div>
 						<div className="item  ">
-							<Link to={socialMediaAccounts.instagram}>
+							<Link target="_blank" to={socialMediaAccounts.instagram}>
 								<SlSocialInstagram className="text-primary-700" />
 							</Link>
 						</div>
 						<div className="item  ">
-							<Link to={socialMediaAccounts.google}>
+							<Link target="_blank" to={socialMediaAccounts.google}>
 								<SlSocialGoogle className="text-primary-700" />
 							</Link>
 						</div>
 						<div className="item  ">
-							<Link to={socialMediaAccounts.faceBook}>
+							<Link target="_blank" to={socialMediaAccounts.faceBook}>
 								<TiSocialFacebook className="text-primary-700 text-2xl" />
 							</Link>
 						</div>

@@ -40,13 +40,13 @@ function Form() {
 				<>
 					<label
 						htmlFor={"name"}
-						className={`inline-block after:content-['*'] after:text-red-700 capitalize ${currentLang === "ar" && "text-right"}`}
+						className={`inline-block after:content-['*'] after:text-red-700 capitalize ${currentLang === "ar" ? "text-right" : ""}`}
 					>
 						{t("form.name")}
 					</label>
 					<input
 						id={"name"}
-						dir={currentLang === "ar" && "rtl"}
+						dir={currentLang === "ar" ? "rtl" : "ltr"}
 						aria-label={`${"name"}`}
 						required
 						className="outline-none p-2 border-primary-500 border-[2px] rounded-md bg-primary-50 h-11 placeholder:text-xl "
@@ -63,7 +63,7 @@ function Form() {
 					</label>
 					<input
 						id={"email"}
-						dir={currentLang === "ar" && "rtl"}
+						dir={currentLang === "ar" ? "rtl" : "ltr"}
 						aria-label={`${"email"}`}
 						required
 						className="outline-none p-2 border-primary-500 border-[2px] rounded-md bg-primary-50 h-11 placeholder:text-xl "
@@ -83,7 +83,6 @@ function Form() {
 					name="message"
 					cols={50}
 					rows={10}
-					
 				/>
 				<div className="flex justify-center space-y-14 my-5">
 					<button

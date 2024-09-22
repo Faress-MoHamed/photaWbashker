@@ -6,7 +6,7 @@ import Header from "../../Components/Header";
 import { useTranslation } from "react-i18next";
 import { fetchProducts } from "../../API/api";
 import CategoriesList from "../../Components/CategoriesList";
-import CardsDashboard from "../Dashboard/CardsDashboard";
+import CardsDashboard from "../productsLists/CardsDashboard";
 
 const Products = () => {
 	const location = useLocation();
@@ -32,7 +32,7 @@ const Products = () => {
 				id="products"
 				className={`${i18n.language === "ar" ? "font-Changa" : "font-new-amsterdam"}`}
 			>
-				<Header>{t("header.products")}</Header>
+				<Header>{t("headers.products")}</Header>
 				<div className="flex justify-center items-center">
 					<CategoriesList />
 				</div>

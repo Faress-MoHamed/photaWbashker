@@ -1,7 +1,9 @@
 import { Helmet } from "react-helmet";
 import Hero from "./Hero";
-import AboutUs from "./AboutUs";
 import Reviews from "./Reviews";
+import Services from "./Services";
+import AboutUs from "./AboutUs";
+// import OurCustomers from "./OurCustomers";
 
 function Home() {
 	return (
@@ -12,7 +14,9 @@ function Home() {
 			</Helmet>{" "}
 			<Hero />
 			<AboutUs />
-			<Reviews/>
+			{/* <OurCustomers /> */}
+			<Services />
+			<Reviews />
 		</>
 	);
 }
