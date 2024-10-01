@@ -21,6 +21,10 @@ function DashboardHome() {
 			name: t("dashboard.services.user"),
 			path: "user",
 		},
+		{
+			name: t("dashboard.services.reviews"),
+			path: "reviews",
+		},
 	];
 	return (
 		<>
@@ -30,11 +34,11 @@ function DashboardHome() {
 			</Helmet>
 			<main
 				id="home"
-				className="w-full h-[85vh] flex justify-center items-center "
+				className="w-full min-h-[85vh] flex justify-center items-center "
 			>
 				<Container>
-					<Header>This is Dashboard.</Header>
-					<div className="flex md:flex-row flex-col w-full justify-evenly md:h-2/4 h-4/5 items-center">
+					<Header>{t("dashboard.headers.dashborad")}</Header>
+					<div className="flex md:flex-row md:flex-wrap md:gap-10 gap-6 p-6 flex-col w-full justify-evenly md:h-2/4 h-4/5 items-center">
 						{services
 							.filter((el) => {
 								// Show the 'user' card only if the user role is 'owner'

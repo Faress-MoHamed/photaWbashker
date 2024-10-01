@@ -28,11 +28,6 @@ function TopNavBar({ setOpen }) {
 				<nav className="flex justify-between mx-auto items-center bg-white">
 					<div className="social-Media-Side flex gap-5 items-center">
 						<div className="item  ">
-							<Link target="_blank" to={socialMediaAccounts.tikTok}>
-								<FaTiktok className="text-primary-700" />
-							</Link>
-						</div>
-						<div className="item  ">
 							<Link target="_blank" to={socialMediaAccounts.instagram}>
 								<SlSocialInstagram className="text-primary-700" />
 							</Link>

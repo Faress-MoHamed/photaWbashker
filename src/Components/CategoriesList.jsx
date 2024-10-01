@@ -1,17 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { getAllCategories } from "../API/api";
 
 const CategoriesList = () => {
 	const { i18n } = useTranslation();
-	const [selectedCategory, setSelectedCategory] = useState(() => {
-		// Retrieve the last selected category from sessionStorage, or default to "All"
-		return sessionStorage.getItem("selectedCategory") || "All";
-	});
-
-	// Fetch categories
 	const {
 		data: fetchedCategories = [], // Default to an empty array to avoid null issues
 		isError: categoriesIsError,
@@ -19,17 +13,35 @@ const CategoriesList = () => {
 	} = useQuery({
 		queryKey: ["categories"],
 		queryFn: async () => {
-			const { data: res } = await getAllCategories();
-			return res.categories;
+			try {
+				const { data: res } = await getAllCategories();
+				return res.categories;
+			} catch (error) {
+				console.error(error);
+			}
 		},
+	});
+	const [selectedCategory, setSelectedCategory] = useState(() => {
+		return (
+			fetchedCategories.filter(
+				(el) => el?._id === window.location.search.split("=")[1]
+			) || "All"
+		);
 	});
 
 	// Save the selected category to sessionStorage when user selects a new one
 	const handleSelectCategory = (category) => {
-		const categoryName = category?.name || "All";
+		const categoryName = category?._id || "All";
 		setSelectedCategory(categoryName);
-		sessionStorage.setItem("selectedCategory", categoryName); // Save selected category to sessionStorage
+		// sessionStorage.setItem("selectedCategory", categoryName); // Save selected category to sessionStorage
 	};
+
+	useEffect(() => {
+
+		setSelectedCategory(() => {
+			return window.location.search.split("=")[1] || "All";
+		});
+	}, [window.location.search.split("=")[1]]);
 
 	if (categoriesIsError) {
 		console.error("Error fetching categories:", errorCategories);
@@ -54,7 +66,7 @@ const CategoriesList = () => {
 							to={`?category=${category?._id}`}
 							key={index}
 							onClick={() => handleSelectCategory(category)}
-							className={`md:text-lg text-sm md:w-[250px] w-full text-gray-800 md:px-2 px-0 py-2 font-medium rounded-lg bg-gray-100 hover:bg-gray-400 transition-all ${selectedCategory === category?.name ? "bg-gray-400" : ""}`}
+							className={`md:text-lg text-sm md:w-[250px] w-full text-gray-800 md:px-2 px-0 py-2 font-medium rounded-lg bg-gray-100 hover:bg-gray-400 transition-all ${selectedCategory === category?._id ? "bg-gray-400" : ""}`}
 						>
 							{category.name}
 						</Link>

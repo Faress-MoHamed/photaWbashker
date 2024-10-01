@@ -4,11 +4,15 @@
 			"home": "الصفحه الرئيسية",
 			"Products": "منتجاتنا",
 			"category": "اصناف",
-			"user": "المستخدمين"
+			"user": "المستخدمين",
+			"reviews": "الأراء"
 		},
 		"headers": {
 			"productList": "قائمة المنتجات",
-			"categoryList": "قائمة الاصناف"
+			"categoryList": "قائمة الاصناف",
+			"admins": "جميع المسؤلين",
+			"dashborad": "لوحة التحكم",
+			"reviewList": "لائحة الاراء"
 		},
 		"productForm": {
 			"product_name": "اسم المنتج",
@@ -30,7 +34,8 @@
 		"services": {
 			"products": "منتجات",
 			"category": "أصناف",
-			"user": "المستخدمين"
+			"user": "المستخدمين",
+			"reviews": "الأراء"
 		},
 		"categoryForm": {
 			"category_name": "اسم الصنف",
@@ -38,6 +43,15 @@
 			"category_Add_Btn": "اضافة صنف",
 			"category_Update_Btn": "تعديل صنف",
 			"category_delete_Btn": "حذف صنف"
+		},
+		"reviewForm": {
+			"userName": "اسم العميل",
+			"reviewText": "محتوي الرأي",
+			"rating": "التقييم",
+			"submit": "إرسال",
+			"update": "تعديل",
+			"review_Update_Btn": "تعديل",
+			"review_delete_Btn": "حذف"
 		},
 		"hello": "اهلا"
 	},

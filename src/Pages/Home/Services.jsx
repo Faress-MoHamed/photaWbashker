@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import { MobileHandlerContext } from "../../utils/mobileHandler";
 import Container from "../../Components/Container";
 import Header from "../../Components/Header";
 import { useTranslation } from "react-i18next";
-import ProductsWeProvideCards from "../../Components/ProductsWeProvideCards";
 import { useQuery } from "@tanstack/react-query";
 import { getAllCategories } from "../../API/api";
 import toast from "react-hot-toast";
@@ -12,18 +11,37 @@ import ServicesCard from "../../Components/ServicesCard";
 function Services() {
 	const [categoryList, setCategoriesList] = useState();
 	const { t, i18n } = useTranslation();
-	const { data: Categories } = useQuery({
+	const {
+		data: Categories,
+		isSuccess: categoriesSuccess,
+		isError: categoriesError,
+	} = useQuery({
 		queryKey: ["categories"],
 		queryFn: async () => {
 			try {
 				const { data: res } = await getAllCategories();
-				setCategoriesList(res?.categories);
 				return res?.categories;
 			} catch (error) {
 				toast.error(error.message);
 			}
 		},
 	});
+
+	useEffect(() => {
+		const onSuccess = () => {
+			if (categoriesSuccess) {
+				setCategoriesList(Categories);
+			}
+		};
+		const onError = () => {
+			if (categoriesError) {
+				// Handle error
+				console.log(categoriesError);
+			}
+		};
+		onSuccess();
+		onError();
+	}, [Categories, categoriesSuccess, categoriesError]);
 
 	const currentLang = i18n.language;
 	return (

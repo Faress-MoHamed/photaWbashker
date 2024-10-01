@@ -4,11 +4,15 @@
 			"home": "Home",
 			"Products": "Products",
 			"category": "categories",
-			"user": "users"
+			"user": "users",
+			"reviews": "reviews"
 		},
 		"headers": {
 			"productList": "productList",
-			"categoryList": "Category List"
+			"categoryList": "Category List",
+			"admins": "All Admins",
+			"dashborad": "This is Dashboard",
+			"reviewList": "Review List"
 		},
 		"productForm": {
 			"product_name": "product name",
@@ -30,7 +34,8 @@
 		"services": {
 			"products": "products",
 			"category": "category",
-			"user": "users"
+			"user": "users",
+			"reviews": "reviews"
 		},
 		"categoryForm": {
 			"category_name": "category name",
@@ -38,6 +43,15 @@
 			"category_Add_Btn": "Add Category",
 			"category_Update_Btn": "Update Category",
 			"category_delete_Btn": "delete Category"
+		},
+		"reviewForm": {
+			"userName": "ReviewrName",
+			"reviewText": "Review Text",
+			"rating": "Rating",
+			"submit": "submit",
+			"update": "update",
+			"review_Update_Btn": "update",
+			"review_delete_Btn": "delete"
 		},
 		"hello": "hello"
 	},

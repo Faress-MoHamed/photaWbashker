@@ -41,6 +41,12 @@ function NavBarDashboard({ open, setOpen }) {
 			path: "users",
 			link: "user",
 		},
+		{
+			id: 4,
+			name: t("dashboard.navbar.reviews"),
+			path: "reviews",
+			link: "reviews",
+		},
 	];
 	const navLinksMobile = [
 		{
@@ -63,15 +69,19 @@ function NavBarDashboard({ open, setOpen }) {
 			name: t("dashboard.navbar.user"),
 			link: "user",
 		},
+		{
+			id: 4,
+			name: t("dashboard.navbar.reviews"),
+			path: "reviews",
+			link: "reviews",
+		},
 	];
 
 	useEffect(() => {
-		console.log(window.location.pathname.split("/")[2]);
 		if (
 			!localStorage.getItem("token") &&
 			window.location.pathname !== "/dashboard/sign"
 		) {
-			// console.log(window.location.pathname);
 			toast.error("You must be logged in to access this page❌");
 		}
 	}, [window.location.pathname]);

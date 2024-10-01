@@ -16,6 +16,7 @@ import {
 import Container from "../../Components/Container";
 import Header from "../../Components/Header";
 import InputField from "../../Components/InputField";
+import { t } from "i18next";
 
 function GetAllUsers() {
 	const queryClient = useQueryClient();
@@ -143,9 +144,9 @@ function GetAllUsers() {
 				<title>Admin Management</title>
 				<meta name="description" content="Admin management" />
 			</Helmet>
-			<main id="admin-management" className="min-h-screen py-8">
-				<Container>
-					<Header>All Admins</Header>
+			<Container>
+				<main id="admin-management" className="min-h-screen py-8">
+					<Header>{t("dashboard.headers.admins")}</Header>
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-8">
 						{admins?.map((admin) => (
 							<div
@@ -271,8 +272,8 @@ function GetAllUsers() {
 					>
 						Add Admin
 					</button>
-				</Container>
-			</main>
+				</main>
+			</Container>
 		</>
 	);
 }

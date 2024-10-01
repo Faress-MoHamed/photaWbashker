@@ -28,7 +28,9 @@ function ServicesCard({ Category, index }) {
 						alt={Category.name}
 					/>
 				</div>
-				<p className="text-lg font-semibold capitalize">{Category.name}</p>
+				<p className="text-lg font-semibold capitalize text-center">
+					{Category.name}
+				</p>
 			</div>
 		</motion.a>
 	);

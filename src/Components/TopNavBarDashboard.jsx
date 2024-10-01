@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { FaTiktok } from "react-icons/fa";
 import { SlSocialGoogle, SlSocialInstagram } from "react-icons/sl";
 import { TiSocialFacebook } from "react-icons/ti";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { MobileHandlerContext } from "../utils/mobileHandler";
 import { IoMenu } from "react-icons/io5";
 import LogoutButton from "./LogoutButton";
@@ -15,26 +15,19 @@ const socialMediaAccounts = {
 	tel: "tel:+201118249382",
 };
 function TopNavBarDashboard({ setOpen }) {
-	const navigate = useNavigate();
-
 	const { isMobile } = useContext(MobileHandlerContext);
-		const { i18n } = useTranslation();
-		const changeToArabic = () => {
-			i18n.changeLanguage("ar");
-		};
-		const changeToEnglish = () => {
-			i18n.changeLanguage("en");
-		};
+	const { i18n } = useTranslation();
+	const changeToArabic = () => {
+		i18n.changeLanguage("ar");
+	};
+	const changeToEnglish = () => {
+		i18n.changeLanguage("en");
+	};
 	return (
 		<div className="border-b-[1px] border-b-black/10 sticky top-0 bg-white z-[20]">
 			<div className="container lg:w-3/5 w-5/6 mx-auto py-2 p-1 bg-white">
 				<nav className="flex justify-between mx-auto items-center bg-white">
 					<div className="social-Media-Side flex gap-5 items-center">
-						<div className="item  ">
-							<Link target="_blank" to={socialMediaAccounts.tikTok}>
-								<FaTiktok className="text-primary-700" />
-							</Link>
-						</div>
 						<div className="item  ">
 							<Link target="_blank" to={socialMediaAccounts.instagram}>
 								<SlSocialInstagram className="text-primary-700" />

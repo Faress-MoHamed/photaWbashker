@@ -16,6 +16,7 @@ import Sign from "./Components/Sign.jsx";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import useAuth from "./hooks/useAuth.js";
+import Review from "./Pages/Dashboard-Reviews/Review.jsx";
 // import "./i18n-dashboard";
 
 function DashboardApp() {
@@ -72,6 +73,7 @@ function DashboardApp() {
 					<Route path="" index={true} element={<DashboardHome />} />
 					<Route path="products" element={<ProductList />} />
 					<Route path="category" element={<Category />} />
+					<Route path="reviews" element={<Review />} />
 				</Route>
 			</Route>
 		</Routes>

@@ -55,7 +55,7 @@ function CategoryCard({ category, isLoading, setEditCategoryId, setFormData }) {
 		/>
 	) : (
 		<main
-			className="flex flex-col items-center justify-center bg-gray-50 rounded-lg shadow-lg lg:p-0 p-3"
+			className="flex flex-col items-center justify-center bg-gray-50 rounded-lg shadow-lg p-3"
 			key={category._id}
 		>
 			<img

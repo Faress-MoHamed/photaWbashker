@@ -16,15 +16,24 @@ const OneProduct = () => {
 	let { isLoading, data: product } = useQuery({
 		queryKey: ["products", id],
 		queryFn: async () => {
-			const { data: res } = await GetById(id);
-			return res;
+			try {
+				const { data: res } = await GetById(id);
+				// console.log(res);
+				return res;
+			} catch (error) {
+				console.error(error);
+			}
 		},
 	});
 	let { data: CategoryDetails } = useQuery({
 		queryKey: ["category", product?.Category],
 		queryFn: async () => {
-			const { data: CategorybyId } = await GetCategoryId(product?.Category);
-			return CategorybyId.category;
+			try {
+				const { data: CategorybyId } = await GetCategoryId(product?.Category);
+				return CategorybyId?.category;
+			} catch (error) {
+				console.error(error);
+			}
 		},
 	});
 	const [selectedColor, setSelectedColor] = useState(null);
@@ -86,9 +95,9 @@ const OneProduct = () => {
 								{product?.colors?.map((color) => (
 									<button
 										key={color.hexValue}
-										className={`w-6 h-6 rounded-full border-2 ${
+										className={`w-6 h-6 rounded-full border-2 shadow-2xl outline-1 outline-primary-500 outline-double ${
 											selectedColor === color.colorName
-												? "border-black"
+												? "border-primary-500"
 												: "border-transparent"
 										}`}
 										style={{ backgroundColor: color.hexValue }}

@@ -1,6 +1,6 @@
 import { FaStar } from "react-icons/fa";
 
-const ReviewCard = ({ icon, review, stars }) => {
+const ReviewCard = ({ clientName, rating, reviewBody }) => {
 	return (
 		<div className=" rounded-lg shadow-xl w-full h-[250px]  relative">
 			<span
@@ -14,9 +14,9 @@ const ReviewCard = ({ icon, review, stars }) => {
 						className="w-16 h-16 mb-3 rounded-full"
 					/>
 					<div className="flex flex-col justify-center items-center">
-						<h3 className="text-lg font-semibold">Client Name</h3>
+						<h3 className="text-lg font-semibold">{clientName}</h3>
 						<div className="flex">
-							{Array(stars)
+							{Array(rating)
 								.fill()
 								.map((_, i) => (
 									<FaStar key={i} className="text-yellow-400 text-3xl" />
@@ -24,7 +24,7 @@ const ReviewCard = ({ icon, review, stars }) => {
 						</div>
 					</div>
 				</div>
-				<p className="text-gray-700 text-center ">{review}</p>
+				<p className="text-gray-700 text-center ">{reviewBody}</p>
 			</div>
 		</div>
 	);
